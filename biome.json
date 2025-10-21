@@ -6,8 +6,7 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"ignoreUnknown": false,
-		"includes": ["src/**/*"]
+		"ignoreUnknown": false
 	},
 	"formatter": {
 		"enabled": true,
@@ -28,6 +27,12 @@
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "single"
+		}
+	},
+	"json": {
+		"formatter": {
+			"trailingCommas": "none",
+			"expand": "always"
 		}
 	},
 	"assist": {
