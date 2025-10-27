@@ -1,7 +1,7 @@
-import { createTheme } from '@vanilla-extract/css';
+import { createGlobalTheme } from '@vanilla-extract/css';
 import { pretendard } from './text.css';
 
-export const [themeClass, vars] = createTheme({
+export const vars = createGlobalTheme(':root', {
 	color: {
 		// Primary
 		primary: '#137FEC',
