@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import type { ReactElement, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import type { Text } from 'types';
 import Heading from './index';
 
@@ -9,7 +9,7 @@ type HeadingProps = {
 };
 
 const meta = {
-	component: Heading as (props: HeadingProps) => ReactElement,
+	component: Heading,
 	parameters: {
 		layout: 'centered',
 	},
