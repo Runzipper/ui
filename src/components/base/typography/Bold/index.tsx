@@ -22,10 +22,11 @@ const Bold = <T extends Text = 'p'>({
 }: BoldProps<T>) => {
 	const TextTag = textType as ElementType;
 
-	const mergedClassname = mergeClassnames(classNames[size], className);
-
 	return (
-		<TextTag className={mergedClassname} {...props}>
+		<TextTag
+			className={mergeClassnames(classNames[size], className)}
+			{...props}
+		>
 			{children}
 		</TextTag>
 	);
