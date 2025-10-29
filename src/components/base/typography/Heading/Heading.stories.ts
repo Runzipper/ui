@@ -9,7 +9,7 @@ type HeadingProps = {
 };
 
 const meta = {
-	title: 'Design System/Typography/Heading',
+	title: 'Design System/Typography/Semantic/Heading',
 	component: Heading,
 	parameters: {
 		layout: 'centered',
