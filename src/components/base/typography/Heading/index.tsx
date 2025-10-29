@@ -1,7 +1,7 @@
 import type { ComponentProps, ElementType, ReactNode } from 'react';
 import type { Text } from 'types';
 import { mergeClassnames } from 'utils/mergeClassnames';
-import { defaultStyle, primary, secondary } from './title.css';
+import { defaultStyle, primary, secondary } from './heading.css';
 
 type HeadingProps<T extends Text> = {
 	textType: T;
