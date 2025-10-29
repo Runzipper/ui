@@ -3,6 +3,7 @@ import type { DataProps } from '.';
 import Data from '.';
 
 const meta = {
+	title: 'Design System/Typography/Data',
 	component: Data,
 	parameters: {
 		layout: 'centered',

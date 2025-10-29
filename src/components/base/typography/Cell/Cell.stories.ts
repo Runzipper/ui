@@ -3,6 +3,7 @@ import type { CellProps } from '.';
 import Cell from '.';
 
 const meta = {
+	title: 'Design System/Typography/Cell',
 	component: Cell,
 	parameters: {
 		layout: 'centered',
