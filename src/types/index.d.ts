@@ -28,4 +28,6 @@ export type Text =
 	| 'legend'
 	| 'caption'
 	| 'figcaption'
-	| 'div';
+	| 'div'
+	| 'dt'
+	| 'dd';
