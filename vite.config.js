@@ -4,6 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 // https://vite.dev/config/
 import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+import svgr from '@svgr/rollup';
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -16,7 +17,12 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-	plugins: [react(), tsconfigPaths(), vanillaExtractPlugin()],
+	plugins: [
+		react(),
+		svgr({ include: '**/*.svg' }),
+		tsconfigPaths(),
+		vanillaExtractPlugin(),
+	],
 	test: {
 		projects: [
 			{
