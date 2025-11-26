@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import Regular, { type RegularProps } from './index';
 
 const meta = {
-	title: 'Design System/Typography/Non Semantic/Regular',
+	title: 'Design System/Base/Typography/Non Semantic/Regular',
 	component: Regular,
 	parameters: {
 		layout: 'centered',

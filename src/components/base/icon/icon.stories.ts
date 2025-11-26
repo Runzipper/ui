@@ -4,7 +4,7 @@ import { vars } from 'styles/theme.css';
 import Icon from '.';
 
 const meta = {
-	title: 'Design System/Icon',
+	title: 'Design System/Base/Icon',
 	component: Icon,
 	args: { color: 'black', icon: 'IconCheck' },
 	argTypes: {

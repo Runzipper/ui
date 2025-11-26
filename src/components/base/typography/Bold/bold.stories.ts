@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import Bold, { type BoldProps } from './index';
 
 const meta = {
-	title: 'Design System/Typography/Non Semantic/Bold',
+	title: 'Design System/Base/Typography/Non Semantic/Bold',
 	component: Bold,
 	parameters: {
 		layout: 'centered',

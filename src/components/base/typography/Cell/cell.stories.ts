@@ -3,7 +3,7 @@ import type { CellProps } from '.';
 import Cell from '.';
 
 const meta = {
-	title: 'Design System/Typography/Semantic/Cell',
+	title: 'Design System/Base/Typography/Semantic/Cell',
 	component: Cell,
 	parameters: {
 		layout: 'centered',
