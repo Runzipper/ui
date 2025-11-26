@@ -1,25 +1,34 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 import { vars } from 'styles/theme.css';
 
-export const primary = style({
-	color: vars.color.black,
-	fontWeight: 700,
-	fontSize: vars.fontSize.size5xl,
-	letterSpacing: -1.2,
+const headingBaseStyle = style({
+	color: 'inherit',
 	fontFamily: vars.font.pretendard,
+	margin: 0,
 });
 
-export const secondary = style({
-	color: vars.color.black,
-	fontWeight: 700,
-	fontSize: vars.fontSize.size3xl,
-	letterSpacing: -0.75,
-	fontFamily: vars.font.pretendard,
-});
-
-export const defaultStyle = style({
-	color: vars.color.black,
-	fontWeight: 700,
-	fontSize: vars.fontSize.sizeSm,
-	fontFamily: vars.font.pretendard,
+export const headingStyleVarient = styleVariants({
+	primary: [
+		headingBaseStyle,
+		{
+			fontWeight: 700,
+			fontSize: vars.fontSize.size5xl,
+			letterSpacing: -1.2,
+		},
+	],
+	secondary: [
+		headingBaseStyle,
+		{
+			fontWeight: 700,
+			fontSize: vars.fontSize.size3xl,
+			letterSpacing: -0.75,
+		},
+	],
+	default: [
+		headingBaseStyle,
+		{
+			fontWeight: 700,
+			fontSize: vars.fontSize.sizeSm,
+		},
+	],
 });

@@ -1,17 +1,13 @@
 import type { ComponentProps, ElementType, ReactNode } from 'react';
 import type { Text } from 'types';
 import { mergeClassnames } from 'utils/mergeClassnames';
-import * as styles from './bold.css';
+import { boldStyleVarient } from './bold.css';
 
 export type BoldProps<T extends Text> = {
 	textType: T;
 	children: ReactNode;
-	size: keyof typeof styles;
+	size: keyof typeof boldStyleVarient;
 } & ComponentProps<T>;
-
-const classNames = {
-	...styles,
-};
 
 const Bold = <T extends Text = 'p'>({
 	textType = 'p' as T,
@@ -24,7 +20,7 @@ const Bold = <T extends Text = 'p'>({
 
 	return (
 		<TextTag
-			className={mergeClassnames(classNames[size], className)}
+			className={mergeClassnames(boldStyleVarient[size], className)}
 			{...props}
 		>
 			{children}

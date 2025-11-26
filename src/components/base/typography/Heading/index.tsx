@@ -1,16 +1,16 @@
 import type { ComponentProps, ElementType, ReactNode } from 'react';
 import type { Text } from 'types';
 import { mergeClassnames } from 'utils/mergeClassnames';
-import { defaultStyle, primary, secondary } from './heading.css';
+import { headingStyleVarient } from './heading.css';
 
 type HeadingProps<T extends Text> = {
 	textType: T;
 	children: ReactNode;
 } & ComponentProps<T>;
 
-const classNames: Partial<Record<Text, string>> = {
-	h1: primary,
-	h2: secondary,
+const classNames: Partial<Record<Text, keyof typeof headingStyleVarient>> = {
+	h1: 'primary',
+	h2: 'secondary',
 };
 
 const Heading = <T extends Text = 'h1'>({
@@ -21,8 +21,9 @@ const Heading = <T extends Text = 'h1'>({
 }: HeadingProps<T>) => {
 	const TextTag = textType as ElementType;
 
+	const variantKey = classNames[textType] ?? 'default';
 	const mergedClassname = mergeClassnames(
-		classNames[textType] ?? defaultStyle,
+		headingStyleVarient[variantKey],
 		className,
 	);
 

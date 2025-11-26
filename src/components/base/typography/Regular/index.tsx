@@ -1,17 +1,13 @@
 import type { ComponentProps, ElementType, ReactNode } from 'react';
 import type { Text } from 'types';
 import { mergeClassnames } from 'utils/mergeClassnames';
-import * as styles from './regular.css';
+import { regularStyleVarient } from './regular.css';
 
 export type RegularProps<T extends Text> = {
 	textType: T;
 	children: ReactNode;
-	size: keyof typeof styles;
+	size?: keyof typeof regularStyleVarient;
 } & ComponentProps<T>;
-
-const classNames = {
-	...styles,
-};
 
 const Regular = <T extends Text = 'p'>({
 	textType = 'p' as T,
@@ -24,7 +20,7 @@ const Regular = <T extends Text = 'p'>({
 
 	return (
 		<TextTag
-			className={mergeClassnames(classNames[size], className)}
+			className={mergeClassnames(regularStyleVarient[size], className)}
 			{...props}
 		>
 			{children}
