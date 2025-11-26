@@ -6,6 +6,7 @@ const boldBaseStyle = style({
 	fontWeight: 700,
 	fontFamily: vars.font.pretendard,
 	margin: 0,
+	whiteSpace: 'pre-line',
 });
 
 export const boldStyleVarient = styleVariants({

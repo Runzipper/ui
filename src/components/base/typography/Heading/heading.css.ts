@@ -5,6 +5,7 @@ const headingBaseStyle = style({
 	color: 'inherit',
 	fontFamily: vars.font.pretendard,
 	margin: 0,
+	whiteSpace: 'pre-line',
 });
 
 export const headingStyleVarient = styleVariants({

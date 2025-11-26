@@ -6,6 +6,7 @@ const regularBaseStyle = style({
 	fontWeight: 400,
 	fontFamily: vars.font.pretendard,
 	margin: 0,
+	whiteSpace: 'pre-line',
 });
 
 export const regularStyleVarient = styleVariants({

@@ -6,4 +6,5 @@ export const cellStyle = style({
 	fontWeight: 600,
 	fontSize: vars.fontSize.sizeSm,
 	fontFamily: vars.font.pretendard,
+	whiteSpace: 'pre-line',
 });

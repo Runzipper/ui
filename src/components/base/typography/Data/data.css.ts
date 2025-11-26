@@ -6,4 +6,5 @@ export const dataStyle = style({
 	fontWeight: 500,
 	fontSize: vars.fontSize.sizeSm,
 	fontFamily: vars.font.pretendard,
+	whiteSpace: 'pre-line',
 });
