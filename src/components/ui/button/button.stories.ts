@@ -5,6 +5,11 @@ import Button from '.';
 const meta = {
 	title: 'Design System/UI/Button',
 	component: Button,
+	argTypes: {
+		showShadow: {
+			control: 'boolean',
+		},
+	},
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -14,6 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
 	args: {
 		children: 'button',
+		showShadow: true,
 		onClick: fn(),
 	},
 };

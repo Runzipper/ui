@@ -1,12 +1,24 @@
 import type { ComponentProps } from 'react';
 import { mergeClassnames } from 'utils/mergeClassnames';
-import { buttonStyle } from './button.css';
+import { buttonStyle, shadowStyle } from './button.css';
 
-type ButtonProps = ComponentProps<'button'>;
+type ButtonProps = { showShadow?: boolean } & ComponentProps<'button'>;
 
-const Button = ({ children, className, ...props }: ButtonProps) => {
+const Button = ({
+	children,
+	className,
+	showShadow = false,
+	...props
+}: ButtonProps) => {
 	return (
-		<button {...props} className={mergeClassnames(buttonStyle, className)}>
+		<button
+			{...props}
+			className={mergeClassnames(
+				buttonStyle,
+				showShadow ? shadowStyle : undefined,
+				className,
+			)}
+		>
 			{children}
 		</button>
 	);

@@ -12,7 +12,15 @@ export const buttonStyle = style({
 
 	':hover': {
 		backgroundColor: vars.color.primaryHover,
+		transform: 'scale(1.01)',
 	},
 
-	':active': { backgroundColor: vars.color.primaryActive },
+	':active': {
+		backgroundColor: vars.color.primaryActive,
+		transform: 'scale(0.995)',
+	},
+});
+
+export const shadowStyle = style({
+	boxShadow: vars.shadow.md,
 });
