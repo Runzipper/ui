@@ -25,7 +25,7 @@ export const notificationStyleVarient = styleVariants({
 		{
 			borderColor: vars.color.primaryMedium,
 			backgroundColor: vars.color.primaryLight,
-			color: vars.color.contentLight,
+			color: vars.color.contentDark,
 		},
 	],
 	notification: [
@@ -50,7 +50,7 @@ export const closeButtonVarient = styleVariants({
 	default: [
 		closeButtonBaseStyle,
 		{
-			color: vars.color.contentLight,
+			color: vars.color.contentDark,
 		},
 	],
 	notification: [closeButtonBaseStyle, { color: vars.color.success }],
