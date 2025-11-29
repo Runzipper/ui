@@ -15,12 +15,12 @@ export const vars = createGlobalTheme(':root', {
 		backgroundDark: '#101922',
 
 		// Content
-		contentLight: '#1F2937',
-		contentDark: '#E5E7EB',
+		contentLight: '#E5E7EB',
+		contentDark: '#1F2937',
 
 		// Subtle
-		subtleLight: '#1F2937',
-		subtleDark: '#E5E7EB',
+		subtleLight: '#E5E7EB',
+		subtleDark: '#1F2937',
 
 		// Border
 		borderLight: '#E5E7EB',
