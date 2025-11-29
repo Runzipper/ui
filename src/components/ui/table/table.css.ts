@@ -33,11 +33,6 @@ export const headerStyle = style({
 
 export const dataStyle = style({
 	fontSize: vars.fontSize.sizeSm,
-	fontWeight: 500,
-});
-
-export const data2Style = style({
-	fontSize: vars.fontSize.sizeSm,
 	fontWeight: 400,
 	color: '#6C7280',
 });

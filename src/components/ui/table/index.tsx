@@ -4,7 +4,7 @@ import Regular from 'components/base/typography/Regular';
 import TableContainer from './Container';
 import TableHeader from './Header';
 import TableRow from './Row';
-import { data2Style, dataStyle } from './table.css';
+import { dataStyle } from './table.css';
 
 type TableProps = {
 	columns: string[];
@@ -26,12 +26,10 @@ const Table = ({ columns, rows }: TableProps) => {
 			{rows.length > 0 ? (
 				rows.map((row) => (
 					<TableRow key={row.join('-')}>
-						<Data className={dataStyle} textType="span">
-							{row[0]}
-						</Data>
-						{row.slice(1).map((cell) => (
-							<Regular className={data2Style} key={cell} textType="span">
-								{cell}
+						<Data textType="span">{row[0]}</Data>
+						{row.slice(1).map((data) => (
+							<Regular className={dataStyle} key={data} textType="span">
+								{data}
 							</Regular>
 						))}
 					</TableRow>
