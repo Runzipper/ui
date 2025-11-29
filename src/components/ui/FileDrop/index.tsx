@@ -1,7 +1,6 @@
 import { IconCloud } from 'assets/svg';
 import clsx from 'clsx';
-import Bold from 'components/base/typography/Bold';
-import Regular from 'components/base/typography/Regular';
+import Typography from 'components/base/typography';
 import { type ChangeEvent, type DragEvent, useRef, useState } from 'react';
 import Button from '../Button';
 import {
@@ -86,16 +85,16 @@ const FileDrop = ({ onDropFile, accept, multiple = true }: FileDropProps) => {
 			<div className={iconStyle}>
 				<IconCloud />
 			</div>
-			<Bold size="large" textType="p" className={descriptionStyle}>
+			<Typography.Bold size="large" textType="p" className={descriptionStyle}>
 				여기에 파일을 드래그 앤 드롭하세요
-			</Bold>
-			<Regular textType="p" className={subDescriptionStyle}>
+			</Typography.Bold>
+			<Typography.Regular textType="p" className={subDescriptionStyle}>
 				또는 클릭하여 컴퓨터에서 파일을 선택하세요
-			</Regular>
+			</Typography.Regular>
 			<Button type="button" className={buttonStyle} onClick={handleInputClick}>
-				<Bold textType="span" size="medium">
+				<Typography.Bold textType="span" size="medium">
 					파일 선택
-				</Bold>
+				</Typography.Bold>
 			</Button>
 		</div>
 	);

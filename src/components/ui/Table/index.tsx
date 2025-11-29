@@ -1,6 +1,4 @@
-import Cell from 'components/base/typography/Cell';
-import Data from 'components/base/typography/Data';
-import Regular from 'components/base/typography/Regular';
+import Typography from 'components/base/typography';
 import TableContainer from './Container';
 import TableHeader from './Header';
 import TableRow from './Row';
@@ -17,20 +15,24 @@ const Table = ({ columns, rows }: TableProps) => {
 			{columns.length && (
 				<TableHeader>
 					{columns.map((text) => (
-						<Cell key={text} textType="span">
+						<Typography.Cell key={text} textType="span">
 							{text}
-						</Cell>
+						</Typography.Cell>
 					))}
 				</TableHeader>
 			)}
 			{rows.length > 0 ? (
 				rows.map((row) => (
 					<TableRow key={row.join('-')}>
-						<Data textType="span">{row[0]}</Data>
+						<Typography.Data textType="span">{row[0]}</Typography.Data>
 						{row.slice(1).map((data) => (
-							<Regular className={dataStyle} key={data} textType="span">
+							<Typography.Regular
+								className={dataStyle}
+								key={data}
+								textType="span"
+							>
 								{data}
-							</Regular>
+							</Typography.Regular>
 						))}
 					</TableRow>
 				))

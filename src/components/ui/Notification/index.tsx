@@ -1,6 +1,5 @@
 import { IconCheck, IconExclamation, IconX } from 'assets/svg';
-import Bold from 'components/base/typography/Bold';
-import Regular from 'components/base/typography/Regular';
+import Typography from 'components/base/typography';
 import type { ComponentType } from 'react';
 import {
 	closeButtonVarient,
@@ -33,14 +32,14 @@ const Notification = ({
 			{NotificationIcon && <NotificationIcon />}
 			<div>
 				{title && (
-					<Bold textType="p" size="medium">
+					<Typography.Bold textType="p" size="medium">
 						{title}
-					</Bold>
+					</Typography.Bold>
 				)}
 				{description && (
-					<Regular textType="p" size="medium">
+					<Typography.Regular textType="p" size="medium">
 						{description}
-					</Regular>
+					</Typography.Regular>
 				)}
 			</div>
 			{onClose && (
