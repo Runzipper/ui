@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Regular, { type RegularProps } from './index';
+import Regular, { type RegularProps } from '.';
 
 const meta = {
 	title: 'Design System/Base/Typography/Non Semantic/Regular',
