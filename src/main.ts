@@ -1,6 +1,4 @@
-import Icon from 'components/base/icon';
-import Typography from 'components/base/typography';
-import UI from 'components/ui';
-import { vars } from 'styles/theme.css';
-
-export { Icon, vars as Theme, Typography, UI };
+export { default as Icon } from 'components/base/icon';
+export { default as Typography } from 'components/base/typography';
+export { default as UI } from 'components/ui';
+export { vars as Theme } from 'styles/theme.css';
