@@ -3,27 +3,25 @@ import type { Text } from 'types';
 import { mergeClassnames } from 'utils/mergeClassnames';
 import { headingStyleVarient } from './heading.css';
 
-type HeadingProps<T extends Text> = {
+type HeadingType = Extract<Text, 'h1' | 'h2' | 'h3'| 'h4' | 'h5' | 'h6'>
+
+type HeadingProps<T extends HeadingType> = {
 	textType: T;
 	children: ReactNode;
+	size?: keyof typeof headingStyleVarient
 } & ComponentProps<T>;
 
-const classNames: Partial<Record<Text, keyof typeof headingStyleVarient>> = {
-	h1: 'primary',
-	h2: 'secondary',
-};
-
-const Heading = <T extends Text = 'h1'>({
+const Heading = <T extends HeadingType = 'h1'>({
 	textType = 'h1' as T,
+	size = 'default',
 	children,
 	className,
 	...props
 }: HeadingProps<T>) => {
 	const TextTag = textType as ElementType;
 
-	const variantKey = classNames[textType] ?? 'default';
 	const mergedClassname = mergeClassnames(
-		headingStyleVarient[variantKey],
+		headingStyleVarient[size],
 		className,
 	);
 

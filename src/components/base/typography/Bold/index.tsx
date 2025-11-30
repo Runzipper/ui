@@ -6,7 +6,7 @@ import { boldStyleVarient } from './bold.css';
 export type BoldProps<T extends Text> = {
 	textType: T;
 	children: ReactNode;
-	size: keyof typeof boldStyleVarient;
+	size?: keyof typeof boldStyleVarient;
 } & ComponentProps<T>;
 
 const Bold = <T extends Text = 'p'>({
