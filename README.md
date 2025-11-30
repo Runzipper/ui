@@ -1,4 +1,4 @@
-# UIkit for runzipper
+# UIKit for runzipper
 
 > The package includes typography, icon, components, theme for runzipper app.
 
