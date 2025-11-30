@@ -2058,6 +2058,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@runzipper/ui@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@runzipper/ui@workspace:."
+  dependencies:
+    "@biomejs/biome": "npm:2.2.6"
+    "@chromatic-com/storybook": "npm:^4.1.1"
+    "@storybook/addon-a11y": "npm:^9.1.13"
+    "@storybook/addon-docs": "npm:^9.1.13"
+    "@storybook/addon-vitest": "npm:^9.1.13"
+    "@storybook/builder-vite": "npm:^9.1.13"
+    "@storybook/react-vite": "npm:^9.1.13"
+    "@svgr/rollup": "npm:^8.1.0"
+    "@types/node": "npm:^24.9.1"
+    "@types/react": "npm:^19.2.2"
+    "@types/react-dom": "npm:^19.2.2"
+    "@vanilla-extract/css": "npm:^1.17.4"
+    "@vanilla-extract/vite-plugin": "npm:^5.1.1"
+    "@vitejs/plugin-react": "npm:^5.0.4"
+    "@vitest/browser": "npm:^3.2.4"
+    "@vitest/coverage-v8": "npm:^3.2.4"
+    clsx: "npm:^2.1.1"
+    playwright: "npm:^1.56.1"
+    react: "npm:^19.2.0"
+    react-dom: "npm:^19.2.0"
+    storybook: "npm:^9.1.13"
+    typescript: "npm:^5.9.3"
+    vite: "npm:^7.1.11"
+    vite-plugin-dts: "npm:^4.5.4"
+    vite-tsconfig-paths: "npm:^5.1.4"
+    vitest: "npm:^3.2.4"
+  peerDependencies:
+    react: ^19.2.0
+    react-dom: ^19.2.0
+  languageName: unknown
+  linkType: soft
+
 "@rushstack/node-core-library@npm:5.19.0":
   version: 5.19.0
   resolution: "@rushstack/node-core-library@npm:5.19.0"
@@ -5806,39 +5842,6 @@ __metadata:
   checksum: 10c0/5a9f041e5945fba7c189d5410508cbcbefef80b253ed29aa2e1f8a2b86f4bd51af44ee18d4485e6d3468c92be9bf4a42e3a2b72dcaf27ce39ce947ec994f1e6b
   languageName: node
   linkType: hard
-
-"ui@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "ui@workspace:."
-  dependencies:
-    "@biomejs/biome": "npm:2.2.6"
-    "@chromatic-com/storybook": "npm:^4.1.1"
-    "@storybook/addon-a11y": "npm:^9.1.13"
-    "@storybook/addon-docs": "npm:^9.1.13"
-    "@storybook/addon-vitest": "npm:^9.1.13"
-    "@storybook/builder-vite": "npm:^9.1.13"
-    "@storybook/react-vite": "npm:^9.1.13"
-    "@svgr/rollup": "npm:^8.1.0"
-    "@types/node": "npm:^24.9.1"
-    "@types/react": "npm:^19.2.2"
-    "@types/react-dom": "npm:^19.2.2"
-    "@vanilla-extract/css": "npm:^1.17.4"
-    "@vanilla-extract/vite-plugin": "npm:^5.1.1"
-    "@vitejs/plugin-react": "npm:^5.0.4"
-    "@vitest/browser": "npm:^3.2.4"
-    "@vitest/coverage-v8": "npm:^3.2.4"
-    clsx: "npm:^2.1.1"
-    playwright: "npm:^1.56.1"
-    react: "npm:^19.2.0"
-    react-dom: "npm:^19.2.0"
-    storybook: "npm:^9.1.13"
-    typescript: "npm:^5.9.3"
-    vite: "npm:^7.1.11"
-    vite-plugin-dts: "npm:^4.5.4"
-    vite-tsconfig-paths: "npm:^5.1.4"
-    vitest: "npm:^3.2.4"
-  languageName: unknown
-  linkType: soft
 
 "undici-types@npm:~7.16.0":
   version: 7.16.0
