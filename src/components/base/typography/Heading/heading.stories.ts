@@ -1,12 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import type { ReactNode } from 'react';
-import type { Text } from 'types';
-import Heading from './index';
+import Heading from '.';
 
-type HeadingProps = {
-	textType: Text;
-	children: ReactNode;
-};
 
 const meta = {
 	title: 'Design System/Base/Typography/Semantic/Heading',
@@ -24,14 +18,10 @@ const meta = {
 				'h4',
 				'h5',
 				'h6',
-				'p',
-				'span',
-				'strong',
-				'em',
 			],
 		},
 	},
-} satisfies Meta<HeadingProps>;
+} satisfies Meta<typeof Heading>;
 
 export default meta;
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Bold, { type BoldProps } from './index';
+import Bold from './index';
 
 const meta = {
 	title: 'Design System/Base/Typography/Non Semantic/Bold',
@@ -24,7 +24,7 @@ const meta = {
 			],
 		},
 	},
-} satisfies Meta<BoldProps<'p'>>;
+} satisfies Meta<typeof Bold>;
 
 export default meta;
 

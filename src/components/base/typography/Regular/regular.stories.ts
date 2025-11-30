@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import Regular, { type RegularProps } from '.';
+import Regular from '.';
 
 const meta = {
 	title: 'Design System/Base/Typography/Non Semantic/Regular',
@@ -24,7 +24,7 @@ const meta = {
 			],
 		},
 	},
-} satisfies Meta<RegularProps<'p'>>;
+} satisfies Meta<typeof Regular>;
 
 export default meta;
 
