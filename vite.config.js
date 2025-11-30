@@ -23,7 +23,7 @@ export default defineConfig({
 		dts({
 			tsconfigPath: './tsconfig.json',
 			outDir: 'dist',
-			rollupTypes: true,
+			rollupTypes: false,
 		}),
 		svgr({ include: '**/*.svg' }),
 		tsconfigPaths(),
