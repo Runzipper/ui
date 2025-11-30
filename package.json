@@ -17,11 +17,11 @@
 	],
 	"exports": {
 		".": {
-			"types": "./dist/src/main.d.ts",
-			"import": "./dist/main.mjs",
-			"require": "./dist/main.umd.js"
+			"types": "./src/main.d.ts",
+			"import": "./main.mjs",
+			"require": "./main.umd.js"
 		},
-		"./styles": "./dist/ui-style.css"
+		"./styles": "./ui-style.css"
 	},
 	"publishConfig": {
 		"@runzipper:registry": "https://npm.pkg.github.com"
