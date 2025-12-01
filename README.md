@@ -2,6 +2,59 @@
 
 > The package includes typography, icon, components, theme for runzipper app.
 
+## Installation
+
+### Add configuration file
+
+#### npm
+
+.npmrc
+
+```text
+
+@runzipper:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+
+```
+
+#### yarn
+
+ .yarnrc.yml
+
+```yml
+npmScopes:
+  "runzipper":
+    npmRegistryServer: 'https://npm.pkg.github.com'
+    npmAuthToken: '${GITHUB_TOKEN}' 
+```
+
+### Set GITHUB_TOKEN to environment variable
+
+1. Generate a GitHub personal access token
+2. Add the environment variable to your shell setting file
+
+   ```bash
+   # zsh
+   echo 'export GITHUB_TOKEN="your_token_here"' >> ~/.zshrc
+   source ~/.zshrc
+
+   # bash
+   echo 'export GITHUB_TOKEN="your_token_here"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+### Install package
+
+>This package requires react ^19.2 and react-dom ^19.2 as peer dependencies.
+
+  ```bash
+# npm
+npm install @runzipper/ui
+
+# bash
+yarn add @runzipper/ui
+```
+
 ## Icon
 
 ### Usage
