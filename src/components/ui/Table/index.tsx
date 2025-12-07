@@ -2,7 +2,7 @@ import Typography from 'components/base/typography';
 import TableContainer from './Container';
 import TableHeader from './Header';
 import TableRow from './Row';
-import { dataStyle } from './table.css';
+import { dataStyle, emptyDataStyle } from './table.css';
 
 type TableProps = {
 	columns: string[];
@@ -37,7 +37,11 @@ const Table = ({ columns, rows }: TableProps) => {
 					</TableRow>
 				))
 			) : (
-				<TableRow>데이터가 없습니다.</TableRow>
+				<TableRow>
+					<Typography.Regular textType="p" className={emptyDataStyle}>
+						데이터가 없습니다.
+					</Typography.Regular>
+				</TableRow>
 			)}
 		</TableContainer>
 	);

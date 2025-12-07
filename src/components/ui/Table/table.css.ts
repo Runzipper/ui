@@ -46,3 +46,7 @@ globalStyle(`${rowStyle} *:not(:first-child)`, {
 	flexGrow: 1,
 	flexBasis: 0,
 });
+
+export const emptyDataStyle = style({
+	fontSize: vars.fontSize.sizeSm,
+});
