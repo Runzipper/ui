@@ -240,6 +240,21 @@ A component for displaying tables.
 - `columns`: Array of table headers `string[]`
 - `rows`: Array of table data `string[][]` (each row is an array of strings)
 
+### Logo
+
+A component for displaying the application logo.
+
+```tsx
+<UI.Logo type="primary" />
+```
+
+**Props:**
+
+- `type` (optional): Logo style variant - `primary` | `secondary` (default: `primary`)
+  - `primary`: Logo with primary background color
+  - `secondary`: Logo with transparent background
+- Supports all HTML div attributes
+
 ## Theme
 
 This package provides a theme system using Vanilla Extract. You can access design tokens through the `vars` object.
