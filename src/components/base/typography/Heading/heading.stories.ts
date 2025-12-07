@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import Heading from '.';
 
-
 const meta = {
 	title: 'Design System/Base/Typography/Semantic/Heading',
 	component: Heading,
@@ -11,14 +10,7 @@ const meta = {
 	argTypes: {
 		textType: {
 			control: 'select',
-			options: [
-				'h1',
-				'h2',
-				'h3',
-				'h4',
-				'h5',
-				'h6',
-			],
+			options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
 		},
 	},
 } satisfies Meta<typeof Heading>;

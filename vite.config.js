@@ -59,10 +59,10 @@ export default defineConfig({
 	},
 	build: {
 		lib: {
-			name:'ui',
+			name: 'ui',
 			entry: ['src/main.ts'],
 			cssFileName: 'ui-style',
-			formats: ['es','umd'],
+			formats: ['es', 'umd'],
 		},
 		rollupOptions: {
 			external: ['react', 'react-dom'],

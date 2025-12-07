@@ -9,7 +9,7 @@
 		"ignoreUnknown": false,
 		"includes": [
 			"**",
-			"!!**/dist"
+			"!**/dist"
 		]
 	},
 	"formatter": {
