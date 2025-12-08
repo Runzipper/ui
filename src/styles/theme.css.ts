@@ -1,18 +1,14 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 import { pretendard } from './text.css';
 
-const PRIMARY = '#137FEC';
-const SUCCESS = '#10B981';
-const ERROR = '#EF4444';
-
 export const vars = createGlobalTheme(':root', {
 	color: {
 		// Primary
-		primary: PRIMARY,
+		primary: '#137FEC',
 		primaryHover: '#1270D3',
 		primaryActive: '#0F5EB8',
-		primaryLight: `oklch(from ${PRIMARY} calc(l * 0.1) c h)`,
-		primaryMedium: `oklch(from ${PRIMARY} calc(l * 0.2) c h)`,
+		primaryLight: 'rgba(19, 127, 236, 0.1)',
+		primaryMedium: 'rgba(19, 127, 236, 0.2)',
 
 		// Background
 		backgroundLight: '#F6F7F8',
@@ -31,16 +27,16 @@ export const vars = createGlobalTheme(':root', {
 		borderDark: '#374151',
 
 		// Success
-		success: SUCCESS,
-		successLight: `oklch(from ${SUCCESS} calc(l * 0.1) c h)`,
-		successBorder: `oklch(from ${SUCCESS} calc(l * 0.2) c h)`,
-		successHover: `oklch(from ${SUCCESS} calc(l * 0.7) c h)`,
+		success: '#10B981',
+		successLight: 'rgba(16, 185, 129, 0.1)',
+		successBorder: 'rgba(16, 185, 129, 0.2)',
+		successHover: 'rgba(16, 185, 129, 0.7)',
 
 		// Error
-		error: ERROR,
-		errorLight: `oklch(from ${ERROR} calc(l * 0.1) c h)`,
-		errorBorder: `oklch(from ${ERROR} calc(l * 0.2) c h)`,
-		errorHover: `oklch(from ${ERROR} calc(l * 0.7) c h)`,
+		error: '#EF4444',
+		errorLight: 'rgba(239, 68, 68, 0.1)',
+		errorBorder: 'rgba(239, 68, 68, 0.2)',
+		errorHover: 'rgba(239, 68, 68, 0.7)',
 
 		// Base
 		black: '#1F2937',
