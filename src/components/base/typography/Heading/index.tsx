@@ -1,5 +1,5 @@
 import type { ComponentProps, ElementType, ReactNode } from 'react';
-import type { Text } from 'types';
+import type { Text } from 'types/text';
 import { mergeClassnames } from 'utils/mergeClassnames';
 import { headingStyleVarient } from './heading.css';
 
