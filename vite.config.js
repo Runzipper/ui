@@ -9,7 +9,6 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 const dirname =
@@ -27,7 +26,6 @@ export default defineConfig({
 			rollupTypes: false,
 		}),
 		vanillaExtractPlugin(),
-		libInjectCss(),
 		svgr({ include: '**/*.svg' }),
 		tsconfigPaths(),
 	],
@@ -60,7 +58,6 @@ export default defineConfig({
 		],
 	},
 	build: {
-		cssCodeSplit: true,
 		lib: {
 			name: 'ui',
 			entry: ['src/main.ts'],
