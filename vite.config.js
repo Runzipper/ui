@@ -26,10 +26,10 @@ export default defineConfig({
 			outDir: 'dist',
 			rollupTypes: false,
 		}),
+		vanillaExtractPlugin(),
 		libInjectCss(),
 		svgr({ include: '**/*.svg' }),
 		tsconfigPaths(),
-		vanillaExtractPlugin(),
 	],
 	test: {
 		projects: [
@@ -60,6 +60,7 @@ export default defineConfig({
 		],
 	},
 	build: {
+		cssCodeSplit: true,
 		lib: {
 			name: 'ui',
 			entry: ['src/main.ts'],
