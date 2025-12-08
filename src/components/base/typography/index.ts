@@ -5,11 +5,11 @@ import Heading from './Heading';
 import Regular from './Regular';
 
 const Typography = {
-	Bold,
-	Cell,
-	Data,
-	Heading,
-	Regular,
-};
+	Bold: Bold as typeof Bold,
+	Cell: Cell as typeof Cell,
+	Data: Data as typeof Data,
+	Heading: Heading as typeof Heading,
+	Regular: Regular as typeof Regular,
+} as const;
 
 export default Typography;
