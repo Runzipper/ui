@@ -17,9 +17,10 @@ type FileDropProps = {
 	onDropFile: (files: FileList) => void;
 	multiple?: boolean;
 	accept?: string;
+	allowDirectory?: boolean;
 };
 
-const FileDrop = ({ onDropFile, accept, multiple = true }: FileDropProps) => {
+const FileDrop = ({ onDropFile, accept, multiple = true, allowDirectory = false }: FileDropProps) => {
 	const dropboxRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [isDragging, setIsDragging] = useState(false);
@@ -81,6 +82,7 @@ const FileDrop = ({ onDropFile, accept, multiple = true }: FileDropProps) => {
 				multiple={multiple}
 				onChange={handleFileSelect}
 				aria-hidden
+				{...(allowDirectory && { webkitdirectory: '', directory: '' })}
 			/>
 			<div className={iconStyle}>
 				<IconCloud />

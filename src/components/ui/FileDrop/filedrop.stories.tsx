@@ -19,6 +19,9 @@ const meta = {
 		multiple: {
 			control: 'boolean',
 		},
+		allowDirectory: {
+			control: 'boolean',
+		},
 	},
 } satisfies Meta<typeof FileDrop>;
 
@@ -31,5 +34,6 @@ export const Primary: Story = {
 		onDropFile: fn(),
 		multiple: true,
 		accept: '.jpg,.png',
+		allowDirectory: true,
 	},
 };
