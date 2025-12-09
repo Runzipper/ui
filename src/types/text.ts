@@ -30,4 +30,6 @@ export type Text =
 	| 'figcaption'
 	| 'div'
 	| 'dt'
-	| 'dd';
+	| 'dd'
+	| 'th'
+	| 'td';

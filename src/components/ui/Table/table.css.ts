@@ -38,11 +38,13 @@ export const dataStyle = style({
 });
 
 globalStyle(`${rowStyle} *:first-child`, {
+	display: 'flex',
 	flexGrow: 2,
 	flexBasis: 0,
 });
 
 globalStyle(`${rowStyle} *:not(:first-child)`, {
+	display: 'flex',
 	flexGrow: 1,
 	flexBasis: 0,
 });

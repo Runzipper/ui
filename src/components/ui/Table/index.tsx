@@ -15,7 +15,7 @@ const Table = ({ columns, rows }: TableProps) => {
 			{columns.length && (
 				<TableHeader>
 					{columns.map((text) => (
-						<Typography.Cell key={text} textType="span">
+						<Typography.Cell key={text} textType="th">
 							{text}
 						</Typography.Cell>
 					))}
@@ -24,12 +24,12 @@ const Table = ({ columns, rows }: TableProps) => {
 			{rows.length > 0 ? (
 				rows.map((row) => (
 					<TableRow key={row.join('-')}>
-						<Typography.Data textType="span">{row[0]}</Typography.Data>
+						<Typography.Data textType="td">{row[0]}</Typography.Data>
 						{row.slice(1).map((data) => (
 							<Typography.Regular
 								className={dataStyle}
 								key={data}
-								textType="span"
+								textType="td"
 							>
 								{data}
 							</Typography.Regular>
@@ -38,7 +38,7 @@ const Table = ({ columns, rows }: TableProps) => {
 				))
 			) : (
 				<TableRow>
-					<Typography.Regular textType="p" className={emptyDataStyle}>
+					<Typography.Regular textType="td" className={emptyDataStyle}>
 						데이터가 없습니다.
 					</Typography.Regular>
 				</TableRow>
