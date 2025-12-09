@@ -6,7 +6,7 @@ const meta = {
 	component: Table,
 	decorators: [
 		(Story) => (
-			<div style={{ width: 600 }}>
+			<div style={{ width: 600, height: 400 }}>
 				<Story />
 			</div>
 		),
@@ -28,6 +28,23 @@ export const MultiRow: Story = {
 	args: {
 		columns: ['파일 이름', '크기', '유형'],
 		rows: [
+			['Document.pdf', '2.5 MB', 'PDF'],
+			['Presentation.pptx', '5.1 MB', 'PPTX'],
+			['Spreadsheet.xlsx', '1.8 MB', 'XLSX'],
+		],
+	},
+};
+
+export const MultiRowWithScroll: Story = {
+	args: {
+		columns: ['파일 이름', '크기', '유형'],
+		rows: [
+			['Document.pdf', '2.5 MB', 'PDF'],
+			['Presentation.pptx', '5.1 MB', 'PPTX'],
+			['Spreadsheet.xlsx', '1.8 MB', 'XLSX'],
+			['Document.pdf', '2.5 MB', 'PDF'],
+			['Presentation.pptx', '5.1 MB', 'PPTX'],
+			['Spreadsheet.xlsx', '1.8 MB', 'XLSX'],
 			['Document.pdf', '2.5 MB', 'PDF'],
 			['Presentation.pptx', '5.1 MB', 'PPTX'],
 			['Spreadsheet.xlsx', '1.8 MB', 'XLSX'],

@@ -4,8 +4,19 @@ import { vars } from 'styles/theme.css';
 export const tableContainerStyle = style({
 	border: `1px solid ${vars.color.borderLight}`,
 	borderRadius: vars.radius.lg,
-	display: 'block',
+	display: 'flex',
+	maxHeight: '100%',
+	flexDirection: 'column',
+	flex: 1,
 	fontSize: vars.fontSize.sizeSm,
+});
+
+export const rowContainer = style({
+	display: 'flex',
+	flexDirection: 'column',
+	flex: 1,
+	overflowY: 'auto',
+	scrollbarWidth: 'thin',
 });
 
 export const rowStyle = style({
