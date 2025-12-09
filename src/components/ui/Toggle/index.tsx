@@ -1,4 +1,6 @@
 import clsx from 'clsx';
+import type { ComponentProps } from 'react';
+import { mergeClassnames } from 'utils/mergeClassnames';
 import { activeOptionStyle, containerStyle, optionStyle } from './toggle.css';
 
 type ToggleProps<T extends string | number> = {
@@ -6,16 +8,18 @@ type ToggleProps<T extends string | number> = {
 	option2: { label: string; value: T };
 	value: T;
 	onChange: (value: T) => void;
-};
+} & ComponentProps<'div'>;
 
 const Toggle = <T extends string | number>({
 	option1,
 	option2,
 	value,
 	onChange,
+	className,
+	...props
 }: ToggleProps<T>) => {
 	return (
-		<div className={containerStyle}>
+		<div {...props} className={mergeClassnames(containerStyle, className)}>
 			<button
 				type="button"
 				className={clsx(
