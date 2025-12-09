@@ -255,6 +255,32 @@ A component for displaying the application logo.
   - `secondary`: Logo with transparent background
 - Supports all HTML div attributes
 
+### Toggle
+
+A component for toggling between two options.
+
+```tsx
+import { UI } from '@runzipper/ui';
+
+<UI.Toggle
+  option1={{ label: '파일', value: 'file' }}
+  option2={{ label: '폴더', value: 'directory' }}
+  value={selectedValue}
+  onChange={(value) => setSelectedValue(value)}
+/>
+```
+
+**Props:**
+
+- `option1`: First option object `{ label: string; value: T }`
+- `option2`: Second option object `{ label: string; value: T }`
+- `value`: Currently selected value `T` (must match one of the option values)
+- `onChange`: Function called when selection changes `(value: T) => void`
+
+**Generic Type:**
+
+The component supports generic types for the value (`string` or `number`)
+
 ## Theme
 
 This package provides a theme system using Vanilla Extract. You can access design tokens through the `vars` object.
