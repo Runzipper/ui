@@ -2,6 +2,7 @@ import { IconCloud } from 'assets/svg';
 import clsx from 'clsx';
 import Typography from 'components/base/typography';
 import { type ChangeEvent, type DragEvent, useRef, useState } from 'react';
+import scanEntry from 'utils/scanEntry';
 import Button from '../Button';
 import {
 	buttonStyle,
@@ -49,12 +50,28 @@ const FileDrop = ({
 		setIsDragging(false);
 	};
 
-	const onDrop = (e: DragEvent<HTMLDivElement>) => {
+	const onDrop = async (e: DragEvent<HTMLDivElement>) => {
 		e.preventDefault();
 
-		const files = e.dataTransfer.files;
-		if (files?.length) {
-			onDropFile(files);
+		const { items } = e.dataTransfer;
+		const entries: FileSystemEntry[] = [];
+
+		for (const item of items) {
+			const entry = item.webkitGetAsEntry();
+			if (entry) {
+				entries.push(entry);
+			}
+		}
+
+		const results = await Promise.all(entries.map((entry) => scanEntry(entry)));
+		const files = results.flat();
+
+		if (files.length > 0) {
+			const dataTransfer = new DataTransfer();
+			for (const file of files) {
+				dataTransfer.items.add(file);
+			}
+			onDropFile(dataTransfer.files);
 		}
 
 		setIsDragging(false);
