@@ -18,9 +18,16 @@ type FileDropProps = {
 	multiple?: boolean;
 	accept?: string;
 	allowDirectory?: boolean;
+	className?: string;
 };
 
-const FileDrop = ({ onDropFile, accept, multiple = true, allowDirectory = false }: FileDropProps) => {
+const FileDrop = ({
+	onDropFile,
+	accept,
+	multiple = true,
+	allowDirectory = false,
+	className,
+}: FileDropProps) => {
 	const dropboxRef = useRef<HTMLDivElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [isDragging, setIsDragging] = useState(false);
@@ -68,7 +75,11 @@ const FileDrop = ({ onDropFile, accept, multiple = true, allowDirectory = false 
 		// biome-ignore lint/a11y/noStaticElementInteractions: <explanation>
 		<div
 			ref={dropboxRef}
-			className={clsx(containerStyle, isDragging && containerActiveStyle)}
+			className={clsx(
+				containerStyle,
+				isDragging && containerActiveStyle,
+				className,
+			)}
 			onDragEnter={onDragEnter}
 			onDragOver={onDragOver}
 			onDragLeave={onDragLeave}
