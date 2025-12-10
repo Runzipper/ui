@@ -1,5 +1,5 @@
-import * as Icons from 'assets/svg';
 import type { SVGProps } from 'react';
+import * as Icons from '../../../assets/svg';
 
 type IconProps = {
 	icon: keyof typeof Icons;
