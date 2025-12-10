@@ -14,7 +14,7 @@ export const tableContainerStyle = style({
 export const rowContainer = style({
 	display: 'flex',
 	flexDirection: 'column',
-	flex: 1,
+	flex: '1 1 0',
 	overflowY: 'auto',
 	scrollbarWidth: 'thin',
 });
