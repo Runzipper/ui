@@ -67,6 +67,9 @@ export const listStyle = style({
 	position: 'absolute',
 	top: `calc(100% + ${Theme.spacing['1']})`,
 	animation: `${slideDown} 0.2s ease-out`,
+	backgroundColor: Theme.color.white,
+	boxShadow: Theme.shadow.lg,
+	zIndex: Theme.z.header,
 });
 
 globalStyle(`${listStyle} li`, {
