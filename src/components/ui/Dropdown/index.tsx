@@ -1,7 +1,8 @@
 import { IconAngleDown } from 'assets/svg';
 import clsx from 'clsx';
 import Regular from 'components/base/typography/Regular';
-import { useState } from 'react';
+import useClickOutside from 'hooks/useClickOutside';
+import { useRef, useState } from 'react';
 import Button from '../Button';
 import {
 	buttonStyle,
@@ -27,6 +28,8 @@ type DropdownProps = {
 
 const Dropdown = ({ items, value, onSelect, className }: DropdownProps) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const ref = useRef<HTMLDivElement>(null);
+	useClickOutside(ref, () => setIsOpen(false));
 
 	const handleOpenMenu = () => {
 		setIsOpen((state) => !state);
@@ -38,7 +41,7 @@ const Dropdown = ({ items, value, onSelect, className }: DropdownProps) => {
 	};
 
 	return (
-		<div className={dropdownContainer}>
+		<div className={dropdownContainer} ref={ref}>
 			<Button className={clsx(buttonStyle, className)} onClick={handleOpenMenu}>
 				<Regular className={textStyle} textType="span">
 					{value.label}
