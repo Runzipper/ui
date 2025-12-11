@@ -281,6 +281,37 @@ import { UI } from '@runzipper/ui';
 
 The component supports generic types for the value (`string` or `number`)
 
+### Dropdown
+
+A component for selecting a single option from a list.
+
+```tsx
+import { UI } from '@runzipper/ui';
+import { useState } from 'react';
+
+const items = [
+  { label: 'English', value: 'en' },
+  { label: '한국어', value: 'ko' },
+  { label: '日本語', value: 'ja' },
+];
+
+const [selected, setSelected] = useState(items[0]);
+
+<UI.Dropdown
+  items={items}
+  value={selected}
+  onSelect={(item) => setSelected(item)}
+/>
+```
+
+**Props:**
+
+- `items`: Array of dropdown items `DropdownItem[]`
+  - Each item has `{ label: string; value: string }`
+- `value`: Currently selected item `DropdownItem`
+- `onSelect`: Function called when an item is selected `(item: DropdownItem) => void`
+- `className` (optional): Additional CSS class name for the dropdown container
+
 ## Theme
 
 This package provides a theme system using Vanilla Extract. You can access design tokens through the `vars` object.
