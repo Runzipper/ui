@@ -1,4 +1,5 @@
 import Button from './Button';
+import Dropdown from './Dropdown';
 import FileDrop from './FileDrop';
 import Logo from './Logo';
 import Notification from './Notification';
@@ -12,6 +13,7 @@ const UI = {
 	Table,
 	Logo,
 	Toggle,
+	Dropdown,
 };
 
 export default UI;

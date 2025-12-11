@@ -1,3 +1,4 @@
+export { ReactComponent as IconAngleDown } from './angle-down.svg';
 export { ReactComponent as IconCheck } from './check.svg';
 export { ReactComponent as IconCloud } from './cloud.svg';
 export { ReactComponent as IconExclamation } from './exclamation.svg';
