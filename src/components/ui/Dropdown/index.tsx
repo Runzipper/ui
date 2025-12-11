@@ -41,8 +41,8 @@ const Dropdown = ({ items, value, onSelect, className }: DropdownProps) => {
 	};
 
 	return (
-		<div className={dropdownContainer} ref={ref}>
-			<Button className={clsx(buttonStyle, className)} onClick={handleOpenMenu}>
+		<div className={clsx(dropdownContainer, className)} ref={ref}>
+			<Button className={buttonStyle} onClick={handleOpenMenu}>
 				<Regular className={textStyle} textType="span">
 					{value.label}
 				</Regular>

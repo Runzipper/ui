@@ -14,13 +14,14 @@ const slideDown = keyframes({
 
 export const dropdownContainer = style({
 	position: 'relative',
+	width: 100,
 });
 
 export const buttonStyle = style({
+	width: '100%',
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'space-between',
-	width: 100,
 	backgroundColor: Theme.color.white,
 	color: Theme.color.black,
 	border: `${Theme.color.borderLight} 1px solid`,
@@ -41,7 +42,7 @@ export const textStyle = style({
 export const iconStyle = style({
 	width: Theme.spacing['4'],
 	height: Theme.spacing['4'],
-	paddingRight: -8,
+	marginRight: -12,
 	color: Theme.color.borderLight,
 	transition: 'color 0.2s ease-in-out',
 	flexShrink: 0,
@@ -55,7 +56,7 @@ export const iconStyle = style({
 
 export const listStyle = style({
 	listStyle: 'none',
-	width: 100,
+	width: '100%',
 	margin: 0,
 	padding: 0,
 	textAlign: 'center',
