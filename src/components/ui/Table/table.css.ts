@@ -16,7 +16,6 @@ export const rowContainer = style({
 	flexDirection: 'column',
 	flexGrow: 1,
 	flexShrink: 1,
-	flexBasis: 0,
 	overflowY: 'auto',
 	scrollbarWidth: 'thin',
 });

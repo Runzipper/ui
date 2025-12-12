@@ -7,11 +7,12 @@ import { dataStyle, emptyDataStyle, rowContainer } from './table.css';
 type TableProps = {
 	columns: string[];
 	rows: string[][];
+	className: string;
 };
 
-const Table = ({ columns, rows }: TableProps) => {
+const Table = ({ columns, rows, className }: TableProps) => {
 	return (
-		<TableContainer>
+		<TableContainer className={className}>
 			{columns.length && (
 				<TableHeader>
 					{columns.map((text) => (
