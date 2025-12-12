@@ -7,7 +7,7 @@ import { dataStyle, emptyDataStyle, rowContainer } from './table.css';
 type TableProps = {
 	columns: string[];
 	rows: string[][];
-	className: string;
+	className?: string;
 };
 
 const Table = ({ columns, rows, className }: TableProps) => {
